@@ -1,0 +1,5 @@
+package com.shoppingcart.groceryshopping.exception;
+
+public class NullObjectException {
+
+}

@@ -1,0 +1,10 @@
+package com.shoppingcart.groceryshopping.controller;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.shoppingcart.groceryshopping.model.User;
+
+public interface UserRepository extends JpaRepository<User, Integer>{
+             public User findByEmailId(String email);
+             public User findByEmailIdAndPassword(String email, String password);
+}

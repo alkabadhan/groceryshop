@@ -1,0 +1,5 @@
+package com.shoppingcart.groceryshopping.repository;
+
+public interface CategoryRepository {
+
+}

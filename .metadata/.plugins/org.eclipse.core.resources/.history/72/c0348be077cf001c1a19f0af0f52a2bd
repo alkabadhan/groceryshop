@@ -1,0 +1,90 @@
+package com.shoppingcart.groceryshopping.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+@Entity
+@Table(name = "product_info")
+public class Product {
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.SEQUENCE)
+     private int prodId;
+	 @Column
+     private String prodName;
+	 @Column
+     private String brand;
+	 @Column
+     private String imageUrl;
+	 @Column
+     private String category;
+	 @Column
+     private int price;
+	
+     public Product() {
+    	 
+     }
+     
+     public Product(int prodId, String prodName, String brand, String imageUrl, String category, int price) {
+		super();
+		this.prodId = prodId;
+		this.prodName = prodName;
+		this.brand = brand;
+		this.imageUrl = imageUrl;
+		this.category = category;
+		this.price = price;
+	}
+
+
+
+	public int getProdId() {
+		return prodId;
+	}
+
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
+
+	public String getProdName() {
+		return prodName;
+	}
+
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+     
+}
